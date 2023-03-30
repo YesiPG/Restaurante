@@ -4,11 +4,31 @@
 .nav{
     @include mixins.crear-flexbox(space-between,center);
     padding: 1rem 6rem;
+    width: 100%;
+    height: 7rem;
     background-color: variables.$color-five;
+
+    &--show{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 80;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 2s ease-in-out ;
+        
+        &2{
+            opacity: 1;
+            pointer-events: unset;
+            transition: opacity 2s ease-in-out ;
+        }
+    }
+
 
     &__logo{
         font-family: variables.$font-title;
-        font-size: 2.7rem;
+        font-size: 3rem;
 
         &--span:nth-child(1){
             color: variables.$color-first;
@@ -35,14 +55,81 @@
         
     }
 
-    &__btn{
+    &__btnM, &__btnC{
         background-color: variables.$color-five;
         cursor: pointer;
-        // position: absolute;
+        position: absolute;
+        top: 1rem;
+        right: 6rem;
+        opacity: 0;
+        pointer-events: none;
         
-        &--menu{
-            max-width: 100%;
-            width: 3.5rem;
+    }
+
+
+    @media (max-width: 768px){
+        &__content{
+            position: fixed;
+            width: 25rem;
+            height: 100vh;
+            margin-bottom: 4rem;
+            top: 0;
+            right: -100rem;
+            bottom: 0;
+            @include mixins.crear-flexbox(center,center);
+            flex-direction: column;
+            background-color: variables.$color-five;
+            z-index: 50;
+            opacity: 0;
+            pointer-events: none;
+
+            &--show{
+                right: 0;
+                opacity: 1;
+                pointer-events: unset;
+                transition: right 1s ease;
+            }
         }
+
+        &__btnC{
+            right: -100rem;
+            z-index: 55;
+            
+            &--close{
+                pointer-events: none;
+            }
+
+            &--show{
+                right: 2rem;
+                opacity: 1;
+                pointer-events: unset;
+                transition: right 1s ease;
+                &:hover{
+                    transform: rotate(180deg);
+                    transition: transform 1s ease;
+                }
+            }
+
+        }
+
+        &__btnM{
+            opacity: 1;
+            pointer-events: unset;
+            transition: opacity 1s ease;
+
+            &--menu{
+                pointer-events: none;
+            }
+            &:hover{
+                transform: rotate(180deg);
+                transition: transform 1s ease;
+            }
+
+            &--show{
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
     }
 }
