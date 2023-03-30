@@ -1,0 +1,13 @@
+
+
+@mixin crear-flexbox($justify,$align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin crear-grid($colum,$row){
+    display: grid;
+    grid-template-columns: $colum;
+    grid-template-rows: $row;
+}

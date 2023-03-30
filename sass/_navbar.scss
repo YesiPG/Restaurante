@@ -1,0 +1,48 @@
+@use 'variables';
+@use 'mixins';
+
+.nav{
+    @include mixins.crear-flexbox(space-between,center);
+    padding: 1rem 6rem;
+    background-color: variables.$color-five;
+
+    &__logo{
+        font-family: variables.$font-title;
+        font-size: 2.7rem;
+
+        &--span:nth-child(1){
+            color: variables.$color-first;
+        }
+        &--span:nth-child(2){
+            color: variables.$color-third;
+        }
+        &--span:nth-child(3){
+            color: variables.$color-second;
+        }
+    }
+
+    &__content{
+        &--link{
+            font-family: variables.$font-title;
+            color: variables.$color-third;
+            font-size: 1.9rem;
+            margin: 1rem;
+
+            &:hover{
+                color: variables.$color-second;
+            }
+        }
+        
+    }
+
+    &__btn{
+        background-color: variables.$color-five;
+        cursor: pointer;
+        // position: absolute;
+        
+        &--menu{
+            max-width: 100%;
+            width: 3.5rem;
+        }
+    }
+}
