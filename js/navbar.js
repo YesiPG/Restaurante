@@ -19,6 +19,7 @@
             navContenedor.classList.remove("nav__content--show");
             btnMenu.classList.remove("nav__btnM--show");
             btnClose.classList.remove("nav__btnC--show");
+            // btnClose.classList.add("nav__btnC--show");
         }
         
     })

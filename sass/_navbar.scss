@@ -83,11 +83,19 @@
             opacity: 0;
             pointer-events: none;
 
+
             &--show{
                 right: 0;
                 opacity: 1;
                 pointer-events: unset;
                 transition: right 1s ease;
+
+                &2{
+                    right: -100rem;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: right 1s ease;
+                }
             }
         }
 
