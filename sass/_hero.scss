@@ -12,7 +12,7 @@
             top: 0;
             left: 0;
             right: 0;
-            filter: grayscale(1);
+            filter: contrast(1);
             max-width: 100%;
             width: 100%;
             height: 60rem;
@@ -38,10 +38,43 @@
             font-family: variables.$font-parrafo;
             font-size: 4rem;
             padding: 2rem;
+            margin: 0 2rem;
             color: variables.$color-third;
             background-color: rgba($color: #000000, $alpha: .5);
+            text-align: center;
 
         }
 
+    }
+
+    @media (max-width: 768px){
+        &__bienv{
+
+            &--logo{
+                width: 25rem;
+            }
+
+            &--title{
+                font-size: 3rem;
+            }
+        }
+    }
+
+    @media (max-width: 576px){
+        &__bienv{
+
+            &--title{
+                font-size: 2.8rem;
+            }
+        }
+    }
+
+    @media (max-width: 480px){
+        &__bienv{
+
+            &--title{
+                font-size: 2.3rem;
+            }
+        }
     }
 }

@@ -50,12 +50,49 @@
         </div> 
     </main>
 
-    <section class="">
-        <article></article>
+    <section class="product">
+        <h2 class="product__title">NUEVOS PRODUCTOS</h2>
+        <article class="product__cont">
+            <div class="product__cont--platos">
+                <button class="product__cont--platos-btn" data-id="1">
+                    <img class="product__cont--platos-btn_icon" src="images/search.svg" alt="search.svg">
+                </button>
+                <img class="product__cont--platos-img" src="https://www.comedera.com/wp-content/uploads/2017/08/tacos-al-pastor-receta.jpg" alt="tacos al pastor">
+                <h3 class="product__cont--platos-nombre">Tacos al pastor</h3>
+            </div>
+            <div class="product__cont--platos">
+                <button class="product__cont--platos-btn" data-id="2">
+                    <img class="product__cont--platos-btn_icon" src="images/search.svg" alt="search.svg">
+                </button>
+                <img class="product__cont--platos-img" src="https://cdn7.kiwilimon.com/recetaimagen/959/22479.jpg" alt="Nachos">
+                <h3 class="product__cont--platos-nombre">Nachos</h3>
+            </div>
+            <div class="product__cont--platos">
+                <button class="product__cont--platos-btn" data-id="3">
+                    <img class="product__cont--platos-btn_icon" src="images/search.svg" alt="search.svg">
+                </button>
+                <img class="product__cont--platos-img" src="https://mejorconsalud.as.com/wp-content/uploads/2020/12/plato-mexicano-sope.jpg" alt="Sopes">
+                <h3 class="product__cont--platos-nombre">Sopes</h3>
+            </div>
+        </article>
+        <article class="product__modal">
+            <div class="product__modal--cont">
+                <button class="product__modal--cont-btn">
+                    <img class="product__modal--cont-btnImagen" src="images/close2.svg" alt="close2.svg">
+                </button>
+                <img class="product__modal--cont-img" src="" alt="">
+                <div class="product__modal--cont-desc">
+                    <h2 class="product__modal--cont-descTitle"></h2>
+                    <p class="product__modal--cont-descParrafo"></p>
+                    <p class="product__modal--cont-descDetalle"></p>
+                </div>
+            </div>
+        </article>
     </section>
     
     <!-- Script -->
     <script src="js/navbar.js"></script>
+    <script src="js/modal.js"></script>
     <!-- <script src="js/slider.js"></script> -->
 </body>
 </html>

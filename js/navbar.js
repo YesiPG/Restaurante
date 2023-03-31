@@ -26,7 +26,7 @@
 
     w.addEventListener("scroll",(e)=>{
 
-        if(w.scrollY >= 400){
+        if(w.scrollY >= 100){
            nav.classList.add("nav--show");
            nav.classList.add("nav--show2");
         }

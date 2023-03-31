@@ -132,6 +132,17 @@ html {
     pointer-events: none;
   }
 }
+@media (max-width: 480px) {
+  .nav {
+    padding: 1rem 2rem;
+  }
+  .nav__content {
+    width: 100%;
+  }
+  .nav__btnM, .nav__btnC {
+    right: 2rem;
+  }
+}
 
 .hero__content {
   position: relative;
@@ -142,7 +153,7 @@ html {
   top: 0;
   left: 0;
   right: 0;
-  filter: grayscale(1);
+  filter: contrast(1);
   max-width: 100%;
   width: 100%;
   height: 60rem;
@@ -166,8 +177,174 @@ html {
   font-family: "Cormorant Garamond", serif;
   font-size: 4rem;
   padding: 2rem;
+  margin: 0 2rem;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .hero__bienv--logo {
+    width: 25rem;
+  }
+  .hero__bienv--title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 576px) {
+  .hero__bienv--title {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero__bienv--title {
+    font-size: 2.3rem;
+  }
+}
+
+.product__title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding: 8rem;
+  color: #006414;
+}
+.product__cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.product__cont--platos {
+  position: relative;
+  padding: 1rem;
+  margin: 2rem;
+  background-color: #006414;
+  border-radius: 0.6rem;
+  box-shadow: 2px 4px 10px #000;
+}
+.product__cont--platos-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.product__cont--platos-btn_icon {
+  width: 3rem;
+  pointer-events: none;
+}
+.product__cont--platos-img {
+  max-width: 100%;
+  width: 35rem;
+  height: 30rem;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.6rem;
+}
+.product__cont--platos-nombre {
+  color: #ffffff;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+.product__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+.product__modal--show {
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity 1s ease-in;
+}
+.product__modal--cont {
+  position: relative;
+  top: -100rem;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 2px 4px 10px red;
+  display: grid;
+  grid-template-columns: 420px 350px;
+  grid-template-rows: 1fr;
+}
+.product__modal--cont-show {
+  top: 0;
+  transition: top 2s ease-in;
+}
+.product__modal--cont-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.product__modal--cont-btn:hover {
+  transform: rotate(360deg);
+  transition: transform 1s ease;
+}
+.product__modal--cont-btnImagen {
+  width: 3.5rem;
+  pointer-events: none;
+}
+.product__modal--cont-img {
+  max-width: 100%;
+  width: 40rem;
+  height: 35rem;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+.product__modal--cont-desc {
+  padding: 0 1rem;
+}
+.product__modal--cont-descTitle {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.product__modal--cont-descParrafo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #999;
+}
+.product__modal--cont-descDetalle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+@media (max-width: 480px) {
+  .product__title {
+    font-size: 2.8rem;
+  }
+  .product__cont--platos-img {
+    width: 30rem;
+    height: 25rem;
+  }
+}
+@media (max-width: 350px) {
+  .product__cont--platos-img {
+    height: 20rem;
+  }
+}
+@media (max-width: 320px) {
+  .product__title {
+    font-size: 2.5rem;
+  }
+  .product__cont--platos-img {
+    height: 15rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
