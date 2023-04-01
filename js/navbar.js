@@ -27,11 +27,15 @@
     w.addEventListener("scroll",(e)=>{
 
         if(w.scrollY >= 100){
-           nav.classList.add("nav--show");
-           nav.classList.add("nav--show2");
+            nav.classList.add("nav--show");
+            if(w.scrollY >=110){
+                nav.classList.add("nav--show2");
+            }
+            else{
+                nav.classList.remove("nav--show2");
+            }
         }
         else{
-            nav.classList.remove("nav--show2");
             nav.classList.remove("nav--show");
         }
     })

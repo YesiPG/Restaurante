@@ -12,8 +12,10 @@
     const btnClose = d.querySelector(".product__modal--cont-btn");
 
     btnSearch.forEach(el => {
+        
         el.addEventListener("click", (e)=>{
-            if(el.dataset.id="1"){
+            
+            if(el.dataset.id =="1"){
                 contModal.classList.add("product__modal--show");
                 contModalShow.classList.add("product__modal--cont-show");
                 imagen.setAttribute("src","https://www.comedera.com/wp-content/uploads/2017/08/tacos-al-pastor-receta.jpg");
@@ -26,10 +28,11 @@
                     contModal.classList.remove("product__modal--show");
                     contModalShow.classList.remove("product__modal--cont-show");
 
-                })
+                });
+
             }
 
-            if(el.dataset.id="2"){
+            if(el.dataset.id =="2"){
                 contModal.classList.add("product__modal--show");
                 contModalShow.classList.add("product__modal--cont-show");
                 imagen.setAttribute("src","https://cdn7.kiwilimon.com/recetaimagen/959/22479.jpg");
@@ -42,10 +45,12 @@
                     contModal.classList.remove("product__modal--show");
                     contModalShow.classList.remove("product__modal--cont-show");
 
-                })
+                });
+
+
             }
 
-            if(el.dataset.id="3"){
+            if(el.dataset.id =="3"){
                 contModal.classList.add("product__modal--show");
                 contModalShow.classList.add("product__modal--cont-show");
                 imagen.setAttribute("src","https://mejorconsalud.as.com/wp-content/uploads/2020/12/plato-mexicano-sope.jpg");
@@ -58,7 +63,8 @@
                     contModal.classList.remove("product__modal--show");
                     contModalShow.classList.remove("product__modal--cont-show");
 
-                })
+                });
+
             }
         })
     })
