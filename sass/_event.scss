@@ -1,0 +1,10 @@
+@use 'variables';
+@use 'mixins';
+
+.event{
+    &__title{
+        @include mixins.crear-title;
+        background-color: variables.$color-second;
+        color: variables.$color-third;
+    }
+}

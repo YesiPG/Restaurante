@@ -3,16 +3,13 @@
 
 .product{
     &__title{
-        font-family: variables.$font-title;
-        font-size: 3rem;
-        text-align: center;
-        padding: variables.$padding-first;
-        color: variables.$color-first;
+        @include mixins.crear-title;
     }
 
     &__cont{
         @include mixins.crear-flexbox(center,center);
         flex-wrap: wrap;
+        margin-bottom: 4rem;
 
         &--platos{
             position: relative;

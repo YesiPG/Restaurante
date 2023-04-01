@@ -214,6 +214,7 @@ html {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 4rem;
 }
 .product__cont--platos {
   position: relative;
@@ -396,6 +397,16 @@ html {
   .product__cont--platos-img {
     height: 15rem;
   }
+}
+
+.event__title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding: 8rem;
+  color: #006414;
+  background-color: #bd0003;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=style.css.map */

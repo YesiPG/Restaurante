@@ -1,4 +1,4 @@
-
+@use 'variables';
 
 @mixin crear-flexbox($justify,$align){
     display: flex;
@@ -10,4 +10,12 @@
     display: grid;
     grid-template-columns: $colum;
     grid-template-rows: $row;
+}
+
+@mixin crear-title{
+    font-family: variables.$font-title;
+    font-size: 3rem;
+    text-align: center;
+    padding: variables.$padding-first;
+    color: variables.$color-first;
 }
