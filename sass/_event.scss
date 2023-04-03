@@ -2,9 +2,72 @@
 @use 'mixins';
 
 .event{
+    position: relative;
+    
     &__title{
         @include mixins.crear-title;
         background-color: variables.$color-second;
         color: variables.$color-third;
+    }
+
+    &__cont{
+        @include mixins.crear-grid(5% 1fr 1fr 5%, 1fr);
+        position: absolute;
+        padding: 8rem;
+        opacity: 0;
+        pointer-events: unset;
+        transition: opacity 1s ease-in;
+
+        &--show{
+            opacity: 1;
+            pointer-events: unset;
+        }
+
+        &--img{
+            max-width: 100%;
+            width: 55rem;
+            height: 35rem;
+            object-fit: cover;
+            padding: 1rem;
+            
+        }
+
+        &--flecha{
+            margin: auto;
+            cursor: pointer;
+        }
+
+        &--plan{
+            padding: 1rem;
+            &-title{
+                font-family: variables.$font-title;
+                color: variables.$color-first;
+                font-size: 2.3rem;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            &-parrafo{
+                font-family: variables.$font-parrafo;
+                font-size: 2rem;
+                margin: 0 2rem;
+            }
+            &-boton{
+                display: inline-block;
+                font-family: variables.$font-parrafo;
+                font-size: 2rem;
+                background-color: variables.$color-second;
+                padding: 1rem 2rem;
+                border-radius: .6rem;
+                color: variables.$color-third;
+                margin-top: 2rem;
+                margin-left: 2rem;
+                cursor: pointer;
+                transition: background-color 1s ease;
+
+                &:hover{
+                    background-color: variables.$color-first;
+                }
+            }
+        }
     }
 }

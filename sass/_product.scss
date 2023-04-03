@@ -64,11 +64,11 @@
         opacity: 0;
         pointer-events: none;
         z-index: 85;
+        transition: opacity 1s ease-in;
 
         &--show{
             opacity: 1;
             pointer-events: unset;
-            transition: opacity 1s ease-in;
         }
 
         &--cont{
@@ -79,10 +79,10 @@
             border-radius: 1rem;
             box-shadow: 2px 4px 10px red;
             @include mixins.crear-grid(420px 350px,1fr);
+            transition: top 2s ease-in;
             
             &-show{
                 top: 0;
-                transition: top 2s ease-in;
             }
             &-btn{
                 position: absolute;

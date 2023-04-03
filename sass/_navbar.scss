@@ -7,6 +7,8 @@
     width: 100%;
     height: 7rem;
     background-color: variables.$color-five;
+    opacity: 1;
+    transition: opacity 1s ease-in-out ;
 
 
     &--show{
@@ -22,7 +24,6 @@
         &2{
             opacity: 1;
             pointer-events: unset;
-            transition: opacity 1s ease-in-out ;
         }
     }
 

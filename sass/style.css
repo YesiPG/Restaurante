@@ -2,7 +2,8 @@
   box-sizing: border-box;
   border: none;
   outline: none;
-  text-decoration: 0;
+  -webkit-text-decoration: 0;
+          text-decoration: 0;
   padding: 0;
   margin: 0;
 }
@@ -21,8 +22,6 @@ html {
   width: 100%;
   height: 7rem;
   background-color: #000000;
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
 }
 .nav--show {
   position: fixed;
@@ -37,6 +36,7 @@ html {
 .nav--show2 {
   opacity: 1;
   pointer-events: unset;
+  transition: opacity 1s ease-in-out;
 }
 .nav__logo {
   font-family: "Josefin Sans", sans-serif;
@@ -159,7 +159,8 @@ html {
   max-width: 100%;
   width: 100%;
   height: 60rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .hero__bienv {
   display: flex;
@@ -241,7 +242,8 @@ html {
   max-width: 100%;
   width: 35rem;
   height: 30rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   border-radius: 0.6rem;
 }
@@ -265,11 +267,11 @@ html {
   opacity: 0;
   pointer-events: none;
   z-index: 85;
-  transition: opacity 1s ease-in;
 }
 .product__modal--show {
   opacity: 1;
   pointer-events: unset;
+  transition: opacity 1s ease-in;
 }
 .product__modal--cont {
   position: relative;
@@ -281,10 +283,10 @@ html {
   display: grid;
   grid-template-columns: 420px 350px;
   grid-template-rows: 1fr;
-  transition: top 2s ease-in;
 }
 .product__modal--cont-show {
   top: 0;
+  transition: top 2s ease-in;
 }
 .product__modal--cont-btn {
   position: absolute;
@@ -305,7 +307,8 @@ html {
   max-width: 100%;
   width: 40rem;
   height: 35rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 1rem;
 }
 .product__modal--cont-desc {
@@ -400,9 +403,6 @@ html {
   }
 }
 
-.event {
-  position: relative;
-}
 .event__title {
   font-family: "Josefin Sans", sans-serif;
   font-size: 3rem;
@@ -414,59 +414,10 @@ html {
 }
 .event__cont {
   display: grid;
-  grid-template-columns: 5% 1fr 1fr 5%;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  position: absolute;
-  padding: 8rem;
-  opacity: 0;
-  pointer-events: unset;
-  transition: opacity 1s ease-in;
-}
-.event__cont--show {
-  opacity: 1;
-  pointer-events: unset;
 }
 .event__cont--img {
   max-width: 100%;
-  width: 55rem;
-  height: 35rem;
-  object-fit: cover;
-  padding: 1rem;
-}
-.event__cont--flecha {
-  margin: auto;
-  cursor: pointer;
-}
-.event__cont--plan {
-  padding: 1rem;
-}
-.event__cont--plan-title {
-  font-family: "Josefin Sans", sans-serif;
-  color: #006414;
-  font-size: 2.3rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.event__cont--plan-parrafo {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
-  margin: 0 2rem;
-}
-.event__cont--plan-boton {
-  display: inline-block;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
-  background-color: #bd0003;
-  padding: 1rem 2rem;
-  border-radius: 0.6rem;
-  color: #ffffff;
-  margin-top: 2rem;
-  margin-left: 2rem;
-  cursor: pointer;
-  transition: background-color 1s ease;
-}
-.event__cont--plan-boton:hover {
-  background-color: #006414;
-}
-
-/*# sourceMappingURL=style.css.map */
+  width: 30rem;
+}/*# sourceMappingURL=style.css.map */
