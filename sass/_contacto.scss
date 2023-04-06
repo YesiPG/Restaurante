@@ -1,0 +1,62 @@
+@use 'variables';
+@use 'mixins';
+
+
+.contacto{
+    &__title{
+        @include mixins.crear-title;
+    }
+
+    &__form{
+        @include mixins.crear-flexbox(center,center);
+        flex-direction: column;
+        margin-bottom: 8rem;
+
+        &--label{
+            font-family: variables.$font-title;
+            font-size: 2.2rem;
+            color: variables.$color-second;
+
+            &-input,&-textarea{
+                display: block;
+                margin: 1rem 0;
+                margin-bottom: 2rem;
+                padding: 1rem;
+                font-family: variables.$font-parrafo;
+                font-size: 2rem;
+                width: 50rem;
+                border-bottom: 2px solid #000;
+                border-radius: .6rem;
+                background-color: rgba($color: #000000, $alpha: .1);
+                color: variables.$color-first;
+                transition: border-bottom 1s ease-in;
+
+                &Show{
+                    border-bottom: 2px solid variables.$color-first;
+                }
+                &Show2{
+                    border-bottom: 2px solid variables.$color-second;
+                }
+    
+            }
+            &-textarea{
+                resize: none;
+            }
+        }
+        
+        input[type="submit"]{
+            font-family: variables.$font-parrafo;
+            font-size: 2.2rem;
+            color: variables.$color-third;
+            background-color: variables.$color-second;
+            padding: 1rem 3rem;
+            border-radius: .6rem;
+            cursor: pointer;
+            transition: background-color 1s ease;
+
+            &:hover{
+                background-color: variables.$color-first
+            }
+        }
+    }
+}

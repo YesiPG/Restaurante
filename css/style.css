@@ -209,7 +209,7 @@ html {
   font-family: "Josefin Sans", sans-serif;
   font-size: 3rem;
   text-align: center;
-  padding: 8rem;
+  padding: 8rem 0;
   color: #006414;
 }
 .product__cont {
@@ -410,7 +410,7 @@ html {
   font-family: "Josefin Sans", sans-serif;
   font-size: 3rem;
   text-align: center;
-  padding: 8rem;
+  padding: 8rem 0;
   color: #006414;
   background-color: #bd0003;
   color: #ffffff;
@@ -593,7 +593,7 @@ html {
   font-family: "Josefin Sans", sans-serif;
   font-size: 3rem;
   text-align: center;
-  padding: 8rem;
+  padding: 8rem 0;
   color: #006414;
   font-size: 5rem;
 }
@@ -692,7 +692,7 @@ html {
   font-family: "Josefin Sans", sans-serif;
   font-size: 3rem;
   text-align: center;
-  padding: 8rem;
+  padding: 8rem 0;
   color: #006414;
   padding: 0;
   margin-bottom: 2rem;
@@ -711,7 +711,7 @@ html {
   font-family: "Josefin Sans", sans-serif;
   font-size: 3rem;
   text-align: center;
-  padding: 8rem;
+  padding: 8rem 0;
   color: #006414;
   padding: 0;
   margin-bottom: 2rem;
@@ -761,6 +761,62 @@ html {
     height: 20rem;
     overflow-y: auto;
   }
+}
+
+.contacto__title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding: 8rem 0;
+  color: #006414;
+}
+.contacto__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8rem;
+}
+.contacto__form--label {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.2rem;
+  color: #bd0003;
+}
+.contacto__form--label-input, .contacto__form--label-textarea {
+  display: block;
+  margin: 1rem 0;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  width: 50rem;
+  border-bottom: 2px solid #000;
+  border-radius: 0.6rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #006414;
+  transition: border-bottom 1s ease-in;
+}
+.contacto__form--label-inputShow, .contacto__form--label-textareaShow {
+  border-bottom: 2px solid #006414;
+}
+.contacto__form--label-inputShow2, .contacto__form--label-textareaShow2 {
+  border-bottom: 2px solid #bd0003;
+}
+.contacto__form--label-textarea {
+  resize: none;
+}
+.contacto__form input[type=submit] {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  color: #ffffff;
+  background-color: #bd0003;
+  padding: 1rem 3rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: background-color 1s ease;
+}
+.contacto__form input[type=submit]:hover {
+  background-color: #006414;
 }
 
 .f {
