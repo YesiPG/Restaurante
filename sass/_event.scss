@@ -3,6 +3,7 @@
 
 .event{
     position: relative;
+    margin-bottom: 50rem;
     
     &__title{
         @include mixins.crear-title;
@@ -15,7 +16,7 @@
         position: absolute;
         padding: 8rem;
         opacity: 0;
-        pointer-events: unset;
+        pointer-events: none;
         transition: opacity 1s ease-in;
 
         &--show{
@@ -66,6 +67,137 @@
 
                 &:hover{
                     background-color: variables.$color-first;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 900px) {
+        margin-bottom: 55rem;
+
+        &__cont{
+            padding: 8rem 4rem;
+            &--img{
+                width: 50rem;
+                height: 30rem;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        margin-bottom: 70rem;
+
+        &__cont{
+            &--img{
+                margin: auto;
+                grid-column: 2/4;
+                grid-row: auto;
+            }
+            &--plan{
+                grid-column: 4/2;
+                grid-row: auto;
+
+            }
+            &--flecha{
+                margin: 0;
+                &:nth-child(1){
+                    position: absolute;
+                    top: 37.9rem;
+                    left: 3rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        margin-bottom: 75rem;
+
+        &__title{
+            font-size: 2.9rem;
+        }
+        &__cont{
+            padding: 8rem 2rem;
+
+            &--img{
+                width: 40rem;
+                height: 30rem;
+            }
+            &--flecha{
+                margin: 0;
+                &:nth-child(1){
+                    top: 37.9rem;
+                    left: 1rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 480px) {
+        &__title{
+            font-size: 2.8rem;
+        }
+        &__cont{
+
+            &--img{
+                width: 35rem;
+                height: 25rem;
+            }
+            &--flecha{
+                margin: 0;
+                &:nth-child(1){
+                    top: 32.9rem;
+                    left: 1rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 480px) {
+        &__cont{
+
+            &--img{
+                width: 30rem;
+                height: 20rem;
+            }
+            &--flecha{
+                margin: 0;
+                &:nth-child(1){
+                    top: 27.9rem;
+                    left: 0;
+                }
+            }
+            &--plan{
+                &-title{
+                    font-size: 2rem;
+                }
+                &-parrafo{
+                    display: inline-block;
+                    font-size: 1.9rem;
+                    height: 12rem;
+                    overflow-y: auto;
+                }
+            }
+        }
+    }
+    @media (max-width: 320px) {
+        &__title{
+            padding: 5rem 0;
+            font-size: 2.5rem;
+        }
+        &__cont{
+            &--img{
+                width: 30rem;
+                height: auto;
+            }
+            &--flecha{
+                margin: 0;
+                &:nth-child(1){
+                    top: 26rem;
+                    left: -1rem;
+                }
+            }
+            &--plan{
+                &-title{
+                    font-size: 2rem;
+                }
+                &-parrafo{
+                    font-size: 1.8rem;
                 }
             }
         }

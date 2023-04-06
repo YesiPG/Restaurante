@@ -1,0 +1,77 @@
+@use 'variables';
+@use 'mixins';
+
+.f{
+    position: relative;
+    // top: 50rem;
+    &__imagen{
+        max-width: 100%;
+        width: 100%;
+        height: 35rem;
+        object-fit: cover;
+    }
+    &__cont{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2rem;
+        @include mixins.crear-flexbox(center,center);
+        background-color: rgba($color: #000000, $alpha: .8);
+
+        &--redes{
+            &-icon{
+                display: inline-block;
+                width: 4rem;
+                margin: 1rem;
+                transition: width .2s ease;
+
+                &:hover{
+                    width: 4.5rem;
+                }
+            }
+        }
+
+        &--hr{
+            margin: 2rem 0;
+            &-title{
+                text-align: center;
+                font-family: variables.$font-title;
+                color: variables.$color-third;
+                font-size: 2.2rem;
+            }
+            &-parrafo{
+                font-family: variables.$font-parrafo;
+                color: variables.$color-third;
+                font-size: 2rem;
+            }
+        }
+
+        &--lista{
+            margin-top: 2rem;
+            
+            &-li{
+                margin-bottom: 1rem;
+                font-family: variables.$font-parrafo;
+                color: variables.$color-second;
+                
+
+                &Link{
+                    font-size: 2rem;
+                    color: variables.$color-third;
+                    transition: color .2s ease;
+                    &:hover{
+                        color: #999999f9;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 320px) {
+        &__imagen{
+            height: 45rem;
+        }
+    }
+}
