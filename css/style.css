@@ -57,6 +57,9 @@ html {
   font-size: 1.9rem;
   margin: 1rem;
 }
+.nav__content--link:active {
+  color: #006414;
+}
 .nav__content--link:hover {
   color: #bd0003;
 }
@@ -583,6 +586,180 @@ html {
   }
   .event__cont--plan-parrafo {
     font-size: 1.8rem;
+  }
+}
+
+.hist__title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding: 8rem;
+  color: #006414;
+  font-size: 5rem;
+}
+.hist__parrafo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  padding: 0 8rem;
+}
+@media (max-width: 576px) {
+  .hist__parrafo {
+    padding: 0 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .hist__title {
+    padding: 8rem 0;
+    font-size: 4.5rem;
+  }
+  .hist__parrafo {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 320px) {
+  .hist__title {
+    font-size: 4rem;
+  }
+  .hist__parrafo {
+    font-size: 1.8rem;
+  }
+}
+
+.conc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem;
+  padding: 2rem 0;
+  border-top: 2px solid #bd0003;
+  border-bottom: 2px solid #bd0003;
+}
+.conc__texto {
+  margin: 1rem;
+}
+.conc__texto--title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  color: #bd0003;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.conc__texto--parrafo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+}
+.conc__imagen {
+  max-width: 100%;
+  width: 50rem;
+  object-fit: cover;
+  margin: 1rem;
+}
+@media (max-width: 900px) {
+  .conc {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 576px) {
+  .conc {
+    margin: 8rem 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .conc {
+    margin: 8rem 2rem;
+  }
+}
+@media (max-width: 320px) {
+  .conc__texto--parrafo {
+    font-size: 1.8rem;
+  }
+}
+
+.visMis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8rem;
+  margin-bottom: 8rem;
+}
+.visMis__mision {
+  border-radius: 0.6rem;
+  box-shadow: 2px 4px 10px #006414;
+  padding: 3rem;
+  margin: 2rem;
+}
+.visMis__mision--title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding: 8rem;
+  color: #006414;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.visMis__mision--parrafo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+}
+.visMis__vision {
+  border-radius: 0.6rem;
+  box-shadow: 2px 4px 10px #006414;
+  padding: 3rem;
+  margin: 2rem;
+}
+.visMis__vision--title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding: 8rem;
+  color: #006414;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.visMis__vision--parrafo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+}
+@media (max-width: 850px) {
+  .visMis {
+    flex-wrap: wrap;
+  }
+  .visMis__vision, .visMis__mision {
+    margin: 2rem 0;
+  }
+}
+@media (max-width: 576px) {
+  .visMis {
+    margin: 0 4rem;
+    margin-bottom: 8rem;
+  }
+}
+@media (max-width: 480px) {
+  .visMis {
+    margin: 0 2rem;
+    margin-bottom: 8rem;
+  }
+  .visMis__vision--parrafo {
+    font-size: 1.8rem;
+    height: 25rem;
+    overflow-y: auto;
+  }
+  .visMis__mision--parrafo {
+    font-size: 1.8rem;
+    height: 25rem;
+    overflow-y: auto;
+  }
+}
+@media (max-width: 320px) {
+  .visMis__vision--parrafo {
+    font-size: 1.8rem;
+    height: 20rem;
+    overflow-y: auto;
+  }
+  .visMis__mision--parrafo {
+    font-size: 1.8rem;
+    height: 20rem;
+    overflow-y: auto;
   }
 }
 

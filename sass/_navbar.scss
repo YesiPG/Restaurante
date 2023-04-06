@@ -50,9 +50,13 @@
             font-size: 1.9rem;
             margin: 1rem;
 
+            &:active{
+                color: variables.$color-first;
+            }
             &:hover{
                 color: variables.$color-second;
             }
+            
         }
         
     }

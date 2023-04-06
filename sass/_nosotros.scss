@@ -1,0 +1,180 @@
+@use 'variables';
+@use 'mixins';
+
+.hist{
+
+    &__title{
+        @include mixins.crear-title;
+        font-size: 5rem;
+    }
+
+    &__parrafo{
+        font-family: variables.$font-parrafo;
+        font-size: 2rem;
+        padding: 0 8rem;
+    }
+
+    @media (max-width: 576px){
+        &__parrafo{
+            padding: 0 4rem;
+        }
+    }
+    @media (max-width: 480px){
+        &__title{
+            padding: 8rem 0;
+            font-size: 4.5rem;
+        }
+        &__parrafo{
+            padding: 0 2rem;
+        }
+    }
+    @media (max-width: 320px){
+        &__title{
+            font-size: 4rem;
+        }
+
+        &__parrafo{
+            font-size: 1.8rem;
+        }
+    }
+
+}
+
+.conc{
+    @include mixins.crear-flexbox(center,center);
+    margin: 8rem;
+    padding: 2rem 0;
+    border-top: 2px solid variables.$color-second;
+    border-bottom: 2px solid variables.$color-second;
+
+    &__texto{
+        margin: 1rem;
+        &--title{
+            font-family: variables.$font-title;
+            font-size: 3rem;
+            color: variables.$color-second;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        &--parrafo{
+            font-family: variables.$font-parrafo;
+            font-size: 2rem;
+        }
+    }
+
+    &__imagen{
+        max-width: 100%;
+        width: 50rem;
+        object-fit: cover;
+        margin: 1rem;
+    }
+
+    @media (max-width: 900px){
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: 576px){
+        margin: 8rem 4rem;
+    }
+    @media (max-width: 480px){
+        margin: 8rem 2rem;
+    }
+    @media (max-width: 320px){
+        &__texto{
+            &--parrafo{
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+.visMis{
+    @include mixins.crear-flexbox(center,center);
+    margin: 0 8rem;
+    margin-bottom: 8rem;
+
+    &__mision{
+        border-radius: .6rem;
+        box-shadow: 2px 4px 10px variables.$color-first;
+        padding: 3rem;
+        margin: 2rem;
+
+        &--title{
+            @include mixins.crear-title;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        &--parrafo{
+            font-family: variables.$font-parrafo;
+            font-size: 2rem;
+
+        }
+    }
+
+    &__vision{
+        border-radius: .6rem;
+        box-shadow: 2px 4px 10px variables.$color-first;
+        padding: 3rem;
+        margin: 2rem;
+
+        &--title{
+            @include mixins.crear-title;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        &--parrafo{
+            font-family: variables.$font-parrafo;
+            font-size: 2rem;
+
+        }
+    }
+
+    @media (max-width: 850px){
+        flex-wrap: wrap;
+
+        &__vision,&__mision{
+            margin: 2rem 0;
+        }
+    }
+    @media (max-width: 576px){
+        margin: 0 4rem;
+        margin-bottom: 8rem;
+    }
+    @media (max-width: 480px){
+        margin: 0 2rem;
+        margin-bottom: 8rem;
+
+        &__vision{
+            &--parrafo{
+                font-size: 1.8rem;
+                height: 25rem;
+                overflow-y: auto;
+           }
+        }
+        &__mision{
+            &--parrafo{
+                font-size: 1.8rem;
+                height: 25rem;
+                overflow-y: auto;
+           }
+        }
+    }
+    @media (max-width: 320px){
+        &__vision{
+            &--parrafo{
+                font-size: 1.8rem;
+                height: 20rem;
+                overflow-y: auto;
+           }
+        }
+        &__mision{
+            &--parrafo{
+                font-size: 1.8rem;
+                height: 20rem;
+                overflow-y: auto;
+           }
+        }
+    }
+}

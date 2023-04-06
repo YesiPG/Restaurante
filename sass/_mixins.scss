@@ -19,3 +19,9 @@
     padding: variables.$padding-first;
     color: variables.$color-first;
 }
+
+@mixin crear-parrafo{
+    font-family: variables.$font-parrafo;
+    font-size: 2rem;
+    padding: 0 8rem;
+}
