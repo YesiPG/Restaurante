@@ -7,6 +7,15 @@
         @include mixins.crear-title;
     }
 
+    &__subtitle{
+        font-family: variables.$font-parrafo;
+        font-size: 2.5rem;
+        text-align: center;
+        color: variables.$color-first;
+        margin-bottom: 2rem;
+         
+    }
+
     &__form{
         @include mixins.crear-flexbox(center,center);
         flex-direction: column;
@@ -41,6 +50,7 @@
             }
             &-textarea{
                 resize: none;
+                height: 15rem;
             }
         }
         
@@ -56,6 +66,34 @@
 
             &:hover{
                 background-color: variables.$color-first
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        &__form{
+            &--label{
+                &-input, &-textarea{
+                    width: 40rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 480px) {
+        &__form{
+            &--label{
+                &-input, &-textarea{
+                    width: 35rem;
+                }
+            }
+        }
+    }
+    @media (max-width: 320px) {
+        &__form{
+            &--label{
+                &-input, &-textarea{
+                    width: 22rem;
+                }
             }
         }
     }

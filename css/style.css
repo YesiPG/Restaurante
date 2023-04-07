@@ -770,6 +770,13 @@ html {
   padding: 8rem 0;
   color: #006414;
 }
+.contacto__subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #006414;
+  margin-bottom: 2rem;
+}
 .contacto__form {
   display: flex;
   justify-content: center;
@@ -804,6 +811,7 @@ html {
 }
 .contacto__form--label-textarea {
   resize: none;
+  height: 15rem;
 }
 .contacto__form input[type=submit] {
   font-family: "Cormorant Garamond", serif;
@@ -817,6 +825,21 @@ html {
 }
 .contacto__form input[type=submit]:hover {
   background-color: #006414;
+}
+@media (max-width: 576px) {
+  .contacto__form--label-input, .contacto__form--label-textarea {
+    width: 40rem;
+  }
+}
+@media (max-width: 480px) {
+  .contacto__form--label-input, .contacto__form--label-textarea {
+    width: 35rem;
+  }
+}
+@media (max-width: 320px) {
+  .contacto__form--label-input, .contacto__form--label-textarea {
+    width: 22rem;
+  }
 }
 
 .f {
@@ -841,13 +864,12 @@ html {
   background-color: rgba(0, 0, 0, 0.8);
 }
 .f__cont--redes-icon {
-  display: inline-block;
-  width: 4rem;
+  width: 3.5rem;
   margin: 1rem;
   transition: width 0.2s ease;
 }
 .f__cont--redes-icon:hover {
-  width: 4.5rem;
+  width: 3rem;
 }
 .f__cont--hr {
   margin: 2rem 0;
