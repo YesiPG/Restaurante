@@ -95,32 +95,25 @@
                 right: 0;
                 opacity: 1;
                 pointer-events: unset;
-
-                &2{
-                    right: -100rem;
-                    opacity: 0;
-                    pointer-events: none;
-                    transition: right 1s ease;
-                }
             }
         }
 
         &__btnC{
-            right: -100rem;
             z-index: 55;
             
             &--close{
                 pointer-events: none;
             }
-
+            
             &--show{
-                right: 2rem;
                 opacity: 1;
                 pointer-events: unset;
-                transition: right 1s ease;
+
+                transform: rotate(0);
+                transition: transform 1s ease;
+
                 &:hover{
-                    transform: rotate(180deg);
-                    transition: transform 1s ease;
+                    transform: rotate(360deg);
                 }
             }
 
@@ -130,13 +123,14 @@
             opacity: 1;
             pointer-events: unset;
             transition: opacity 1s ease;
+            transform: rotate(0);
+            transition: transform 1s ease;
 
             &--menu{
                 pointer-events: none;
             }
             &:hover{
-                transform: rotate(180deg);
-                transition: transform 1s ease;
+                transform: rotate(360deg);
             }
 
             &--show{

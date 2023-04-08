@@ -90,10 +90,11 @@
                 right: 1rem;
                 background-color: variables.$color-third;
                 cursor: pointer;
+                transform: rotate(0);
+                transition: transform 1s ease;
 
                 &:hover{
                     transform: rotate(360deg);
-                    transition: transform 1s ease;
                 }
 
                 &Imagen{
@@ -123,6 +124,7 @@
                     font-weight: 400;
                     margin-bottom: 1rem;
                     border-bottom: 1px solid #999;
+                    padding-bottom: 1rem;
                 }
 
                 &Detalle{

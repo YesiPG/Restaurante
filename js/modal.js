@@ -54,8 +54,8 @@
                 contModal.classList.add("product__modal--show");
                 contModalShow.classList.add("product__modal--cont-show");
                 imagen.setAttribute("src","https://mejorconsalud.as.com/wp-content/uploads/2020/12/plato-mexicano-sope.jpg");
-                imagen.setAttribute("alt","Sopes");
-                titulo.innerHTML = "Sopes";
+                imagen.setAttribute("alt","Sopes de pollo");
+                titulo.innerHTML = "Sopes de pollo";
                 parrafo.innerHTML ="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum explicabo architecto maxime ipsa minima eius consectetur illo in veritatis hic voluptas nesciunt nemo, voluptatem quos quibusdam quia autem fugit unde!";
                 detalle.innerHTML = `<b>SKU:</b> Sopes.<br> <b>Categoria:</b> Entradas.<br> <b>Etiquetas:</b> Saludable, Tacos. `;
 

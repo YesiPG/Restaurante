@@ -96,40 +96,33 @@ html {
     opacity: 1;
     pointer-events: unset;
   }
-  .nav__content--show2 {
-    right: -100rem;
-    opacity: 0;
-    pointer-events: none;
-    transition: right 1s ease;
-  }
   .nav__btnC {
-    right: -100rem;
     z-index: 55;
   }
   .nav__btnC--close {
     pointer-events: none;
   }
   .nav__btnC--show {
-    right: 2rem;
     opacity: 1;
     pointer-events: unset;
-    transition: right 1s ease;
+    transform: rotate(0);
+    transition: transform 1s ease;
   }
   .nav__btnC--show:hover {
-    transform: rotate(180deg);
-    transition: transform 1s ease;
+    transform: rotate(360deg);
   }
   .nav__btnM {
     opacity: 1;
     pointer-events: unset;
     transition: opacity 1s ease;
+    transform: rotate(0);
+    transition: transform 1s ease;
   }
   .nav__btnM--menu {
     pointer-events: none;
   }
   .nav__btnM:hover {
-    transform: rotate(180deg);
-    transition: transform 1s ease;
+    transform: rotate(360deg);
   }
   .nav__btnM--show {
     opacity: 0;
@@ -294,10 +287,11 @@ html {
   right: 1rem;
   background-color: #ffffff;
   cursor: pointer;
+  transform: rotate(0);
+  transition: transform 1s ease;
 }
 .product__modal--cont-btn:hover {
   transform: rotate(360deg);
-  transition: transform 1s ease;
 }
 .product__modal--cont-btnImagen {
   width: 3.5rem;
@@ -324,6 +318,7 @@ html {
   font-weight: 400;
   margin-bottom: 1rem;
   border-bottom: 1px solid #999;
+  padding-bottom: 1rem;
 }
 .product__modal--cont-descDetalle {
   font-family: "Cormorant Garamond", serif;
@@ -840,6 +835,179 @@ html {
   .contacto__form--label-input, .contacto__form--label-textarea {
     width: 22rem;
   }
+}
+
+.menu__title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding: 8rem 0;
+  color: #006414;
+}
+.menu__subtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  color: #bd0003;
+  padding: 0 8rem;
+  margin-bottom: 4rem;
+}
+.menu__botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+}
+.menu__botones--btn {
+  cursor: pointer;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  padding: 1rem;
+  width: 20rem;
+  margin: 1rem;
+  background-color: #006414;
+  color: #ffffff;
+  border-radius: 0.6rem;
+  box-shadow: 2px 4px 10px #000;
+  transition: background-color 0.5s ease-in;
+}
+.menu__botones--btn:hover {
+  background-color: #bd0003;
+}
+.menu__cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 8rem;
+}
+.menu__cont--platos {
+  position: relative;
+  margin: 2rem;
+  padding: 1rem;
+  background-color: #bd0003;
+  border-radius: 0.6rem;
+  box-shadow: 2px 4px 10px #000;
+}
+.menu__cont--platos-img {
+  max-width: 100%;
+  width: 30rem;
+  height: 20rem;
+  object-fit: cover;
+}
+.menu__cont--platos-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+.menu__cont--platos-btn:hover {
+  opacity: 1;
+}
+.menu__cont--platos-btn_icon {
+  width: 3.5rem;
+}
+.menu__cont--platos-nombre {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  text-align: center;
+  margin: 2rem 0;
+  color: #ffffff;
+}
+@media (max-width: 576px) {
+  .menu__subtitle {
+    padding: 0 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .menu__subtitle {
+    padding: 0 2rem;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 85;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+.modal__show {
+  opacity: 1;
+  pointer-events: unset;
+}
+.modal__cont {
+  position: relative;
+  background-color: #ffffff;
+  padding: 2rem;
+  width: 80rem;
+  border-radius: 0.6rem;
+  box-shadow: 2px 4px 10px #006414;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -100rem;
+  transition: top 1s ease-in;
+}
+.modal__cont--show {
+  top: 0;
+}
+.modal__cont--img {
+  max-width: 100%;
+  width: 40rem;
+  height: 30rem;
+  object-fit: cover;
+  margin: 1rem;
+  border-radius: 0.6rem;
+}
+.modal__cont--texto {
+  margin: 1rem;
+  align-self: flex-start;
+}
+.modal__cont--texto-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #bd0003;
+}
+.modal__cont--texto-parrafo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  border-bottom: 1px solid #bd0003;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+.modal__cont--texto-parrafo2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+}
+.modal__cont--boton {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #ffffff;
+  transform: rotate(0);
+  transition: transform 1s ease;
+}
+.modal__cont--boton:hover {
+  transform: rotate(360deg);
+}
+.modal__cont--boton-img {
+  width: 4rem;
+  pointer-events: none;
 }
 
 .f {

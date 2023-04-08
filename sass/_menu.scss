@@ -1,0 +1,189 @@
+@use 'variables';
+@use 'mixins';
+
+.menu{
+    &__title{
+        @include mixins.crear-title;
+    }
+
+    &__subtitle{
+        font-family: variables.$font-parrafo;
+        font-size: 2.2rem;
+        color: variables.$color-second;
+        padding: 0 8rem;
+        margin-bottom: 4rem;
+    }
+
+    &__botones{
+        @include mixins.crear-flexbox(center,center);
+        flex-wrap: wrap;
+        // margin: 0 8rem;
+        margin-bottom: 6rem;
+        &--btn{
+            cursor: pointer;
+            font-family: variables.$font-parrafo;
+            font-size: 2rem;
+            padding: 1rem;
+            width: 20rem;
+            margin: 1rem;
+            background-color: variables.$color-first;
+            color: variables.$color-third;
+            border-radius: .6rem;
+            box-shadow: 2px 4px 10px #000;
+            transition: background-color .5s ease-in;
+
+            &:hover{
+                background-color: variables.$color-second;
+            }
+        }
+    }
+
+    &__cont{
+        @include mixins.crear-flexbox(center,center);
+        flex-wrap: wrap;
+        // margin: 0 8rem;
+        margin-bottom: 8rem;
+
+        &--platos{
+            position: relative;
+            margin: 2rem;
+            padding: 1rem;
+            background-color: variables.$color-second;
+            border-radius: .6rem;
+            box-shadow: 2px 4px 10px #000;
+
+            &-img{
+                max-width: 100%;
+                width: 30rem;
+                height: 20rem;
+                object-fit: cover;
+            }
+
+            &-btn{
+                cursor: pointer;
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-radius: .6rem;
+                padding: .5rem;
+                opacity: .6;
+                transition: opacity .5s ease;
+
+                &:hover{
+                    opacity: 1;
+                }
+
+                &_icon{
+                    width: 3.5rem;
+                }
+            }
+
+            &-nombre{
+                font-family: variables.$font-parrafo;
+                font-size: 2.2rem;
+                text-align: center;
+                margin: 2rem 0;
+                color: variables.$color-third;
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        &__subtitle{
+            padding: 0 4rem;
+        }
+    }
+    @media (max-width: 480px) {
+        &__subtitle{
+            padding: 0 2rem;
+        }
+    }
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+    @include mixins.crear-flexbox(center,center);
+    z-index: 85;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+
+    &__show{
+        opacity: 1;
+        pointer-events: unset;
+    }
+
+    &__cont{
+        position: relative;
+        background-color: variables.$color-third;
+        padding: 2rem;
+        width: 80rem;
+        border-radius: .6rem;
+        box-shadow: 2px 4px 10px variables.$color-first;
+        @include mixins.crear-flexbox(center,center);
+        top: -100rem;
+        transition: top 1s ease-in;
+
+        &--show{
+            top: 0;
+        }
+
+        &--img{
+            max-width: 100%;
+            width: 40rem;
+            height: 30rem;
+            object-fit: cover;
+            margin: 1rem;
+            border-radius: .6rem;
+        }
+
+        &--texto{
+            margin: 1rem;
+            align-self: flex-start;
+
+            &-title{
+                font-family: variables.$font-title;
+                font-size: 2.2rem;
+                margin-bottom: 2rem;
+                color: variables.$color-second;
+            }
+
+            &-parrafo{
+                font-family: variables.$font-parrafo;
+                font-size: 2rem;
+                border-bottom: 1px solid variables.$color-second;
+                margin-bottom: 2rem;
+                padding-bottom: 1rem;
+            }
+            &-parrafo2{
+                font-family: variables.$font-parrafo;
+                font-size: 2rem;
+            }
+
+        }
+
+        &--boton{
+            cursor: pointer;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: variables.$color-third;
+            transform: rotate(0);
+            transition: transform 1s ease;
+
+            &:hover{
+                transform: rotate(360deg);
+            }
+
+            &-img{
+                width: 4rem;
+                pointer-events: none;
+            }
+        }
+    }
+}
