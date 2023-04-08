@@ -111,7 +111,7 @@
     z-index: 85;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 1s ease;
+    transition: opacity 1.5s ease;
 
     &__show{
         opacity: 1;
@@ -127,7 +127,7 @@
         box-shadow: 2px 4px 10px variables.$color-first;
         @include mixins.crear-flexbox(center,center);
         top: -100rem;
-        transition: top 1s ease-in;
+        transition: top 2s ease-in;
 
         &--show{
             top: 0;

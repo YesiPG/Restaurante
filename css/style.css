@@ -942,7 +942,7 @@ html {
   z-index: 85;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 1s ease;
+  transition: opacity 1.5s ease;
 }
 .modal__show {
   opacity: 1;
@@ -959,7 +959,7 @@ html {
   justify-content: center;
   align-items: center;
   top: -100rem;
-  transition: top 1s ease-in;
+  transition: top 2s ease-in;
 }
 .modal__cont--show {
   top: 0;
