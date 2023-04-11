@@ -953,6 +953,7 @@ html {
   background-color: #ffffff;
   padding: 2rem;
   width: 80rem;
+  margin: 2rem;
   border-radius: 0.6rem;
   box-shadow: 2px 4px 10px #006414;
   display: flex;
@@ -968,12 +969,11 @@ html {
   max-width: 100%;
   width: 40rem;
   height: 30rem;
-  object-fit: cover;
   margin: 1rem;
   border-radius: 0.6rem;
+  object-fit: cover;
 }
 .modal__cont--texto {
-  margin: 1rem;
   align-self: flex-start;
 }
 .modal__cont--texto-title {
@@ -998,7 +998,7 @@ html {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0);
   transform: rotate(0);
   transition: transform 1s ease;
 }
@@ -1008,6 +1008,36 @@ html {
 .modal__cont--boton-img {
   width: 4rem;
   pointer-events: none;
+}
+@media (max-width: 768px) {
+  .modal__cont {
+    flex-wrap: wrap;
+  }
+  .modal__cont--img {
+    width: 30rem;
+    height: 20rem;
+  }
+}
+@media (max-width: 576px) {
+  .modal__cont--img {
+    width: 25rem;
+    height: 15rem;
+  }
+  .modal__cont--texto-parrafo {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 350px) {
+  .modal__cont {
+    margin: 1rem;
+  }
+  .modal__cont--texto-parrafo {
+    font-size: 1.8rem;
+  }
+  .modal__cont--texto-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .f {
