@@ -17,7 +17,7 @@
     &__botones{
         @include mixins.crear-flexbox(center,center);
         flex-wrap: wrap;
-        // margin: 0 8rem;
+        margin: 0 6rem;
         margin-bottom: 6rem;
         &--btn{
             cursor: pointer;
@@ -89,11 +89,22 @@
     }
 
     @media (max-width: 576px) {
+        &__botones{
+            margin: 0 4rem;
+            margin-bottom: 8rem;
+        }
         &__subtitle{
             padding: 0 4rem;
         }
     }
     @media (max-width: 480px) {
+        &__botones{
+            margin: 0 2rem;
+            margin-bottom: 8rem;
+            &--btn{
+                width: 100%;
+            }
+        }
         &__subtitle{
             padding: 0 2rem;
         }

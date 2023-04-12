@@ -856,6 +856,7 @@ html {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: 0 6rem;
   margin-bottom: 6rem;
 }
 .menu__botones--btn {
@@ -919,11 +920,22 @@ html {
   color: #ffffff;
 }
 @media (max-width: 576px) {
+  .menu__botones {
+    margin: 0 4rem;
+    margin-bottom: 8rem;
+  }
   .menu__subtitle {
     padding: 0 4rem;
   }
 }
 @media (max-width: 480px) {
+  .menu__botones {
+    margin: 0 2rem;
+    margin-bottom: 8rem;
+  }
+  .menu__botones--btn {
+    width: 100%;
+  }
   .menu__subtitle {
     padding: 0 2rem;
   }
