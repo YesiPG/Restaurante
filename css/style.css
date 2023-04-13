@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
   border: none;
   outline: none;
@@ -1050,6 +1050,71 @@ html {
     font-size: 2rem;
     margin-bottom: 1rem;
   }
+}
+
+.p__title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  padding: 8rem 0;
+  color: #006414;
+  color: #bd0003;
+}
+.p__imagen {
+  padding: 2rem 8rem;
+}
+.p__imagen--img {
+  display: inline-block;
+  width: 5rem;
+  animation-name: mover;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes mover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100rem);
+  }
+}
+.p__parrafo {
+  margin: 0 8rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+}
+
+.i__cont {
+  position: relative;
+}
+.i__cont--img {
+  max-width: 100%;
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+.i__cont--title {
+  position: absolute;
+  top: 0;
+  color: #ffffff;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  margin-top: 6rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+.i__cont--title:nth-child(2) {
+  right: 0;
+  margin-top: 16rem;
+}
+.i__cont--title:nth-child(3) {
+  left: 0;
+  margin-top: 26rem;
 }
 
 .f {
