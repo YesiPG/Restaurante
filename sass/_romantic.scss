@@ -7,36 +7,27 @@
         color: variables.$color-second;
     }
     &__imagen{
-        padding: 2rem 8rem;
-
-        &--img{
-            display: inline-block;
-            width: 5rem;
-            animation-name: mover;
-            animation-duration: 4s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            // animation-delay: 1s;
-    
-
-            @keyframes mover {
-                0%{transform: translateX(0);}
-                100%{transform: translateX(100rem);}
-            }
-        }
+        background-color: #000;
+        background-image: url("https://m.media-amazon.com/images/I/71pEV-L3KeL._AC_UF894,1000_QL80_.jpg");
+        background-repeat: repeat;
+        background-size: cover;
+        max-width: 100%;
+        padding: 6rem;
+        margin: 0 8rem;
     }
 
     &__parrafo{
         margin: 0 8rem;
         font-family: variables.$font-parrafo;
         font-size: 2.2rem;
-        margin-top: 2rem;
+        margin-top: 4rem;
         margin-bottom: 8rem;
     }
+
 }
 
 .i{
+    margin-bottom: 8rem;
     &__cont{
         position: relative;
         &--img{
@@ -66,5 +57,23 @@
                 margin-top: 26rem;
             }
         }
+    }
+}
+
+.r{
+    margin: 8rem 0;
+
+    &__title{
+        margin: 0 8rem;
+        font-family: variables.$font-title;
+        font-size:  3rem;
+        color: variables.$color-second;
+        margin-bottom: 4rem;
+    }
+
+    &__parrafo{
+        margin: 0 8rem;
+        font-family: variables.$font-parrafo;
+        font-size: 2.2rem;
     }
 }

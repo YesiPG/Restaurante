@@ -1061,33 +1061,25 @@ html {
   color: #bd0003;
 }
 .p__imagen {
-  padding: 2rem 8rem;
-}
-.p__imagen--img {
-  display: inline-block;
-  width: 5rem;
-  animation-name: mover;
-  animation-duration: 4s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-@keyframes mover {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(100rem);
-  }
+  background-color: #000;
+  background-image: url("https://m.media-amazon.com/images/I/71pEV-L3KeL._AC_UF894,1000_QL80_.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  max-width: 100%;
+  padding: 6rem;
+  margin: 0 8rem;
 }
 .p__parrafo {
   margin: 0 8rem;
   font-family: "Cormorant Garamond", serif;
   font-size: 2.2rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
   margin-bottom: 8rem;
 }
 
+.i {
+  margin-bottom: 8rem;
+}
 .i__cont {
   position: relative;
 }
@@ -1115,6 +1107,22 @@ html {
 .i__cont--title:nth-child(3) {
   left: 0;
   margin-top: 26rem;
+}
+
+.r {
+  margin: 8rem 0;
+}
+.r__title {
+  margin: 0 8rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  color: #bd0003;
+  margin-bottom: 4rem;
+}
+.r__parrafo {
+  margin: 0 8rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
 }
 
 .f {
